@@ -13,7 +13,7 @@ from envs.generation.scm_gen import SCMGenerator
 
 from envs.callbacks import CheckpointCallback
 from stable_baselines3.common import vec_env
-from gym.spaces import MultiDiscrete
+from gym.spaces.multi_discrete import MultiDiscrete
 from cddqn import CDDQN, QNetwork
 from dualDQN import DualDQN
 from DQNrandINT import DQNrandINT

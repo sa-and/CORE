@@ -14,7 +14,7 @@ import wandb
 
 import numpy as np
 import torch as th
-from gym import spaces
+from gym.spaces import Discrete, MultiDiscrete
 
 from stable_baselines3.common.buffers import ReplayBuffer
 from stable_baselines3.common.callbacks import BaseCallback
@@ -126,7 +126,7 @@ class DualDQN(OffPolicyAlgorithm):
             seed=seed,
             sde_support=False,
             optimize_memory_usage=optimize_memory_usage,
-            supported_action_spaces=(spaces.Discrete, spaces.MultiDiscrete),
+            supported_action_spaces=None,
             support_multi_env=True,
         )
 

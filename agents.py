@@ -122,7 +122,7 @@ class CausalAgent(ABC):
         """
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
-            return nx.adjacency_matrix(self.causal_model).todense().flatten().tolist()[0]
+            return nx.adjacency_matrix(self.causal_model).todense().flatten().tolist()
 
     # ---------------------------------------------- Abstract methods ----------------------------------------------
     @abstractmethod
